@@ -21,6 +21,13 @@
   -webkit-border-radius: 4px !important;
 }
 
+.radio-label:focus,
+.radio-label:active,
+.radio-label.active {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
 .filters-outer {
   background-color: white;
   border-radius: 4px !important;
@@ -82,12 +89,5 @@ hr {
 @media screen and (min-width: 1024px) {
 .year-btn{
   padding: 2px 18px;
-}
-
-.radio-label:focus,
-.radio-label:active,
-.radio-label.active {
-  background-color: #28a745;
-  border-color: #28a745;
 }
 }
