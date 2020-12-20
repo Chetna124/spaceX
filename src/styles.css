@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+.bg-white{
+    background-color: whitesmoke;
+}
+
+.border-rd{
+    border-radius: 4px!important;
+    -webkit-border-radius: 4px!important;
+    -moz-border-radius: 4px!important;
+    -ms-border-radius: 4px!important;
+    -o-border-radius: 4px!important;
+}
+
+.align-center{
+    text-align: center;
+  }
+
+  .flex-align-center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (max-width: 767px) {
+    .desktop{
+        display: none;
+      }
+  }
+  @media screen and (min-width: 768px) {
+    .mobile{
+        display: none;
+      }
+  }
+  

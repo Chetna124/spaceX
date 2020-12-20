@@ -1,0 +1,70 @@
+<div id="outermost" class="row mb-2">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="d-flex">
+            <h5 class="mt-1"><strong>Filters</strong></h5>
+            <button type="button" class="btn all-mission-btn mt-1 border-rd ml-auto"
+                (click)="getAllMissions()">Reset</button>
+        </div>
+
+        <div class="row flex-align-center">
+            <label class="mb-0">Launch Year</label>
+        </div>
+        <div class="row">
+            <div class="col-md-10 offset-md-1 col-sm-6 offset-sm-3 col-xsm-6 offset-xsm-3">
+                <hr>
+            </div>
+        </div>
+        <div class="d-flex" style="flex-wrap: wrap;" data-toggle="buttons">
+            <div class="year-btn-div align-center" *ngFor="let year of yearList; let i">
+                <button id="year-{{year.id}}" type="button" class="btn  m-1 border-rd year-btn"
+                    [ngStyle]="{'background-color':selectedYear?.id == year.id ? '#28a745' : '#c3e09b' }"
+                    [ngClass]="{'ml-2' : i%2 !=0}" (click)="setYear(year.id)">{{year.year}}</button>
+            </div>
+        </div>
+
+        <div class="launch">
+            <div class="row flex-align-center mt-2">
+                <label class="mb-0">Launch Success</label>
+            </div>
+            <div class="row">
+                <div class="col-md-10 offset-md-1 col-sm-6 offset-sm-3 col-xsm-6 offset-xsm-3">
+                    <hr>
+                </div>
+            </div>
+            <div>
+                <div class="d-flex btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn radio-label mt-1 flex-start">
+                        <input type="radio" name="launch_success" (change)="setLaunchSuccess($event)" id="launchTrue"
+                            [value]="true"> True
+                    </label>
+                    <label class="btn radio-label mt-1 ml-3 flex-end">
+                        <input type="radio" name="launch_success " (change)="setLaunchSuccess($event)" id="launchFalse"
+                            [value]="false"> False
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="land  mb-2">
+            <div class="row flex-align-center mt-2">
+                <label class="mb-0">Land Success</label>
+            </div>
+            <div class="row">
+                <div class="col-md-10 offset-md-1 col-sm-6 offset-sm-3 col-xsm-6 offset-xsm-3">
+                    <hr>
+                </div>
+            </div>
+            <div class="btn-group btn-group-toggle d-flex" data-toggle="buttons">
+                <label class="btn radio-label mt-1 flex-start">
+                    <input type="radio" name="land_success" id="landTrue" (change)="setLandSuccess($event)"
+                        value="true"> True
+                </label>
+                <label class="btn radio-label mt-1 ml-3 flex-end">
+                    <input type="radio" name="land_success" id="landFalse" (change)="setLandSuccess($event)"
+                        value="false"> False
+                </label>
+            </div>
+        </div>
+
+    </div>
+</div>

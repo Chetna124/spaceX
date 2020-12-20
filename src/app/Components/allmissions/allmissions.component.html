@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
+       <div class="col-md-12 col-sm-12 border-rd bg-white">
+        <app-filter [yearList]="yearList" (filterParams)=filterMissions($event)></app-filter> 
+       </div>
+    </div>
+    <div class="col-lg-10 col-md-8 col-xs-12 col-xs-12">
+       <div class="col-md-12">
+        <app-mission [allMissions]="allMissions"></app-mission>
+       </div>
+    </div>
+  </div>

@@ -1,0 +1,33 @@
+<div class="row flex-container">
+    <div class="col-md-6 col-sm-12 col-lg-3 pb-2 mission-outer" *ngFor="let mission of allMissions">
+        <div class="wrap_mission  pt-1 pb-1 border-rd">
+            <div class="image-background align-center m-3">
+                <img class="img-align-left img-responsive" src="{{mission.url}}" alt="Mission image">
+            </div>
+            <div class="ml-3">
+                <h5 class="blue-text">{{mission.name}} #{{mission.id}}</h5>
+                <p class="mb-0"><strong>Mission Ids: </strong></p>
+                <ul class="blue-text">
+                    <li *ngFor="let id of mission.missionIds">{{id}}</li>
+                    <li *ngIf="!mission.missionIds.length">None</li>
+                </ul>
+                <div class="row details-outer">
+                    <div ><strong>Launch Year:</strong></div>
+                    <div class="blue-text">{{mission?.year}}</div>
+                </div>
+                <div class="row details-outer">
+                    <div style="flex-shrink: 1;"><strong>Successful Launch:</strong></div>
+                    <div class="blue-text">{{mission?.launch}}</div>
+                </div>
+                <div class="row details-outer">
+                    <div ><strong>Successful Landing:</strong></div>
+                    <div></div>
+                    <div class="blue-text">{{mission.landing}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-3" *ngIf="!allMissions?.length">
+        <p><strong>No mission Found! </strong></p>
+    </div>
+</div>

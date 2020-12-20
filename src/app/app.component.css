@@ -1,0 +1,17 @@
+body {
+  background: lightgrey;
+  position: relative;
+  margin: 0;
+  padding-bottom: 3rem;
+  min-height: 100%;
+}
+
+footer {
+    position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+

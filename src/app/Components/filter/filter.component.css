@@ -1,0 +1,93 @@
+.line-below {
+  border-bottom: 2px solid lightgrey;
+}
+.year-btn {
+  background-color: #c3e09b;
+  
+}
+
+.all-mission-btn{
+  background-color: #c3e09b;
+  padding: 2px 2px !important;
+}
+
+.radio-label {
+  padding: 2px 5px !important;
+  background-color: #c3e09b;
+  border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  -ms-border-radius: 4px !important;
+  -o-border-radius: 4px !important;
+  -webkit-border-radius: 4px !important;
+}
+
+.filters-outer {
+  background-color: white;
+  border-radius: 4px !important;
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  -ms-border-radius: 4px !important;
+  -o-border-radius: 4px !important;
+}
+
+.flex-container {
+  display: flex;
+}
+
+hr {
+  margin-bottom: 5px;
+  margin-top: 0px;
+  color: lightgray;
+  background: lightgray;
+  height: 2px;
+}
+
+.year-outer {
+  display: flex;
+  margin-right: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 5px;
+}
+
+.year-btn-div{
+  width: 50%!important;
+  background: white;
+}
+.flex-end {
+  align-self: flex-end;
+}
+
+.flex-start {
+  align-self: flex-start;
+}
+
+@media (max-width: 576px) {
+  hr {
+    width: 60%;
+  }
+}
+
+ @media (max-width: 767px) {
+  .year-btn {
+    padding: 2px 50px;
+  }
+}
+@media screen and (min-width: 767px) {
+   .year-btn{
+      padding: 2px 22px;
+  } 
+}
+
+@media screen and (min-width: 1024px) {
+.year-btn{
+  padding: 2px 18px;
+}
+
+.radio-label:focus,
+.radio-label:active,
+.radio-label.active {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+}

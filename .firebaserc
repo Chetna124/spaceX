@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "spacex-chetna"
+  },
+  "targets": {
+    "spacex-chetna": {
+      "hosting": {
+        "spaceX": [
+          "spacex-chetna"
+        ]
+      }
+    }
+  }
+}
