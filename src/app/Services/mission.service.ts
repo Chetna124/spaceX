@@ -27,6 +27,7 @@ return this.http.get(this.allmissionsUrl, {params: params}).pipe(map((missions: 
 
 formatMission(missions: any){
   return missions.map((m: any) => {
+    console.log(m?.rocket?.first_stage?.cores[0]?.land_success);
     return {
       id: m?.flight_number,
       name: m?.mission_name,
@@ -34,7 +35,7 @@ formatMission(missions: any){
       missionIds: m?.mission_id,
       year: m?.launch_year,
       url: m?.links?.mission_patch_small,
-      landing: m?.rocket?.first_stage?.cores[0]?.land_success ? m?.rocket?.first_stage?.cores[0]?.land_success : false ,
+      landing: m?.rocket?.first_stage?.cores[0]?.land_success !== null ? m?.rocket?.first_stage?.cores[0]?.land_success : 'Null' ,
     }
   });
 }
